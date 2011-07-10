@@ -56,33 +56,6 @@ def checkinmode():
 		ui.err("#002")
 		time.sleep(1)
 		sys.exit()
-	
-
-def home():
-	clear()
-	print "[N]ew User" 
-	print "[L]ist Users"
-	print "[S]earch"
-	print "[C]heck-in mode"
-	print "[E]dit user"
-	print "[Q]uit"
-	xin = raw_input("Input:   ")
-	if xin in ("N","n"):
-		home_newuser()
-	elif xin in ("L","l"):
-		home_list()
-	elif xin in ("S","s"):
-		home_search()
-	elif xin in ("C","c"):
-		home_checkin()
-	elif xin in ("E","e"):
-		home_edituser()
-	elif xin in ("Q","q"):
-		sys.exit()
-	else:
-		raw_input("Whoops... Didnt get that. Press [enter] to try again.")
-		home()
-
 
 def home_newuser():
 	print "====================="
