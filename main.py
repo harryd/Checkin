@@ -148,4 +148,25 @@ def home_checkin():
 def home_edituser():
 	pass
 
+def home():
+	clear()
+	print "[N]ew User" 
+	print "[L]ist Users"
+	print "[S]earch"
+	print "[C]heck-in mode"
+	print "[E]dit user"
+	print "[Q]uit"
+	d = {'n': home_newuser,
+		'l': home_list,
+		's': home_search,
+		'c': home_checkin,
+		'e': home_edituser,
+		'q': sys.exit}
+	xin = raw_input("Input:   ").lower()
+	if xin in d:
+		d[xin]()
+	else:
+		raw_input("Whoops... Didnt get that. Press [enter] to try again.")
+		home()
+
 home()
